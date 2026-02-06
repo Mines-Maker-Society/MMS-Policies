@@ -39,5 +39,5 @@ jobs:
           git add MMS_Policies.pdf
           git diff --cached --quiet && exit 0
 
-          git commit -m "Update MMS-Policies.pdf (${GITHUB_SHA})"
+          git commit -m "Update MMS_Policies.pdf (${GITHUB_SHA})"
           git push
