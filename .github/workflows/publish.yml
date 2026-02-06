@@ -17,7 +17,7 @@ jobs:
       - name: Build LaTeX
         uses: xu-cheng/latex-action@v4
         with:
-          root_file: main.tex
+          root_file: MMS-Policies.tex
 
       - name: Start SSH
         uses: webfactory/ssh-agent@v0.9.1
@@ -30,7 +30,7 @@ jobs:
           ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 
           git clone git@github.com:Mines-Maker-Society/MMS-Policies-Public.git public
-          cp main.pdf public/MMS_Policies.pdf
+          cp MMS-Policies.pdf public/MMS_Policies.pdf
 
           cd public
           git config user.name "github-actions[bot]"
