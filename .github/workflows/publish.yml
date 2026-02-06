@@ -30,7 +30,7 @@ jobs:
           ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 
           git clone git@github.com:Mines-Maker-Society/MMS-Policies-Public.git public
-          cp MMS-Policies.pdf public/MMS_Policies.pdf
+          cp MMS_Policies.pdf public/MMS_Policies.pdf
 
           cd public
           git config user.name "github-actions[bot]"
