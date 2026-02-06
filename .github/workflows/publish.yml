@@ -17,7 +17,7 @@ jobs:
       - name: Build LaTeX
         uses: xu-cheng/latex-action@v4
         with:
-          root_file: MMS-Policies.tex
+          root_file: MMS_Policies.tex
 
       - name: Start SSH
         uses: webfactory/ssh-agent@v0.9.1
@@ -36,7 +36,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add MMS-Policies.pdf
+          git add MMS_Policies.pdf
           git diff --cached --quiet && exit 0
 
           git commit -m "Update MMS-Policies.pdf (${GITHUB_SHA})"
